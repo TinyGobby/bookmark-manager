@@ -7,21 +7,21 @@ describe Bookmark do
     it 'returns all bookmarks' do
       add_testing_bookmarks_to_test_database
       bookmarks = Bookmark.all
-      expect(bookmarks).to include('http://www.makersacademy.com')
-      expect(bookmarks).to include('http://www.destroyallsoftware.com')
-      expect(bookmarks).to include('http://www.google.com')
+      expect(bookmarks).to include('Makers Academy')
+      expect(bookmarks).to include('DESTROY ALL SOFTWARE!!!!11!!!!!')
+      expect(bookmarks).to include('Google')
     end
   end
-  
+
   describe '.create' do
     it 'adds a bookmark' do
-      Bookmark.create('http://www.bbc.co.uk')
+      Bookmark.create('BBC', 'http://www.bbc.co.uk')
       bookmarks = Bookmark.all
-      expect(bookmarks).to include('http://www.bbc.co.uk')
+      expect(bookmarks).to include('BBC')
     end
 
     it 'raises error when the url is incorrect' do
-      Bookmark.create('fake url')
+      Bookmark.create('fake title', 'fake url')
       expect(Bookmark.all).not_to include 'fake url'
     end
   end

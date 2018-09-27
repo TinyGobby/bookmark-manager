@@ -9,7 +9,7 @@ require 'simplecov'
 ENV['BOOKMARK_MANAGER'] = 'TEST'
 
 RSpec.configure do |config|
-  config.before(:each) { setup_test_database}
+  config.before(:each) { setup_test_database }
 end
 
 Capybara.app = BookmarkApp

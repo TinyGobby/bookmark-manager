@@ -21,7 +21,7 @@ class BookmarkApp < Sinatra::Base
   end
 
   post '/add' do
-    flash[:notice] = "Incorrect URL" unless Bookmark.create(params[:url])
+    flash[:fail] = 'Incorrect URL' unless Bookmark.create(params[:title], params[:url])
     redirect('/bookmarks')
   end
 
