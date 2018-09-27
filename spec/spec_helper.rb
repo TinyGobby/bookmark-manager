@@ -1,9 +1,16 @@
 require File.expand_path('../app/bookmark_app.rb', __dir__)
+require File.expand_path('./feature/helpers.rb', __dir__)
 
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
+
+ENV['BOOKMARK_MANAGER'] = 'TEST'
+
+RSpec.configure do |config|
+  config.before(:each) { setup_test_database}
+end
 
 Capybara.app = BookmarkApp
 

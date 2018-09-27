@@ -12,14 +12,21 @@ Requirements
 
 User stories
 ----
+User Story 1: Show a list of bookmarks
 ```
 As a user
 So I can remember pages I want to visit again 
 I want to be able to see a list with the names of the pages I've saved
 ```
-
 Domain Model
 ![User Story 1](./Domain_Model_User_Story_1.jpg)
+
+User Story 2: Add new bookmarks
+```
+As a user
+So I can remember pages I want to visit again 
+I want to be able to add a bookmark to the list
+```
 
 
 ## How to use

@@ -3,3 +3,12 @@
     <li><%= bookmark %></li>
   <% end %>
 </ul>
+
+<form action="/add" method="post">
+  <div>
+    <input type="text" id="url" name="url">
+  </div>
+  <div class="button">
+    <button type="submit" value="Add Bookmark">Add Bookmark</button>
+  </div>
+</form>
