@@ -19,5 +19,10 @@ describe Bookmark do
       bookmarks = Bookmark.all
       expect(bookmarks).to include('http://www.bbc.co.uk')
     end
+
+    it 'raises error when the url is incorrect' do
+      Bookmark.create('fake url')
+      expect(Bookmark.all).not_to include 'fake url'
+    end
   end
 end
